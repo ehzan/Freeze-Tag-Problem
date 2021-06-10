@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Arkin2006}
+E.~M. Arkin, M.~A. Bender, S.~P. Fekete, J.~S.~B. Mitchell, M.~Skutella, The
+  freeze-tag problem: How to wake up a swarm of robots, Algorithmica 46~(2)
+  (2006) 193--221.
+\newblock \href {http://dx.doi.org/10.1007/s00453-006-1206-1}
+  {\path{doi:10.1007/s00453-006-1206-1}}.
+
+\bibitem{OpenProblems}
+E.~D. Demaine, J.~S.~B. Mitchell, J.~O'Rourke,
+  \href{http://maven.smith.edu/~orourke/TOPP/}{The open problems project}.
+\newline\urlprefix\url{http://maven.smith.edu/~orourke/TOPP/}
+
+\bibitem{Demaine2009}
+E.~D. Demaine, M.~Hajiaghayi, H.~Mahini, A.~S. Sayedi-Roshkhar, S.~Oveisgharan,
+  M.~Zadimoghaddam, Minimizing movement, ACM Transactions on Algorithms 5~(3)
+  (2009) 1--30.
+\newblock \href {http://dx.doi.org/10.1145/1541885.1541891}
+  {\path{doi:10.1145/1541885.1541891}}.
+
+\bibitem{Armon2010}
+A.~Armona, A.~Avidor, O.~Schwartz, Cooperative tsp, Theoretical Computer
+  Science 411~(31-33) (2010) 2847--2863.
+\newblock \href {http://dx.doi.org/10.1016/j.tcs.2010.04.016}
+  {\path{doi:10.1016/j.tcs.2010.04.016}}.
+
+\bibitem{Arkin2003}
+E.~M. Arkin, M.~A. Bender, D.~Ge, S.~He, J.~S.~B. Mitchell, Improved
+  approximation algorithms for the freeze-tag problem, in: Proc. 15th ACM
+  Symposium on Parallelism in Algorithms and Architectures (SPAA), ACM, New
+  York, NY, USA, 2003, pp. 295--303.
+\newblock \href {http://dx.doi.org/10.1145/777412.777465}
+  {\path{doi:10.1145/777412.777465}}.
+
+\bibitem{sztainberg2004}
+M.~O. Sztainberg, E.~M. Arkin, M.~A. Bender, J.~S.~B. Mitchell, Theoretical and
+  experimental analysis of heuristics for the ``freeze-tag'' robot awakening
+  problem, IEEE Transactions on Robotics 20~(4) (2004) 691--701.
+\newblock \href {http://dx.doi.org/10.1109/TRO.2004.829439}
+  {\path{doi:10.1109/TRO.2004.829439}}.
+
+\bibitem{Bucantanschi2007}
+D.~Bucantanschi, B.~Hoffmann, K.~R. Hutson, R.~M. Kretchmar, A Neighborhood
+  Search Technique for the Freeze Tag Problem, Vol.~37 of Operations
+  Research/Computer Science Interfaces, Springer, New York, NY, USA, 2007, pp.
+  97--113.
+\newblock \href {http://dx.doi.org/10.1007/978-0-387-48793-9\_7}
+  {\path{doi:10.1007/978-0-387-48793-9\_7}}.
+
+\bibitem{Konemann2004}
+J.~K{\"o}nemann, A.~Levin, A.~Sinha, Approximating the degree-bounded minimum
+  diameter spanning tree problem, Algorithmica 41~(2) (2004) 117--129.
+\newblock \href {http://dx.doi.org/10.1007/s00453-004-1121-2}
+  {\path{doi:10.1007/s00453-004-1121-2}}.
+
+\bibitem{Moezkarimi2014}
+Z.~Moezkarimi, A.~Bagheri, A ptas for geometric 2-ftp, Information Processing
+  Letters 114~(12) (2014) 670--675.
+\newblock \href {http://dx.doi.org/10.1016/j.ipl.2014.06.017}
+  {\path{doi:10.1016/j.ipl.2014.06.017}}.
+
+\bibitem{Clarkson1987}
+K.~L. Clarkson, Approximation algorithms for shortest path motion planning, in:
+  Proc. 19th Annual ACM Symposium on Theory of Computing (STOC), ACM, New York,
+  NY, USA, 1987, pp. 56--65.
+\newblock \href {http://dx.doi.org/10.1145/28395.28402}
+  {\path{doi:10.1145/28395.28402}}.
+
+\bibitem{Keil1992}
+J.~M. Keil, C.~A. Gutwin, Classes of graphs which approximate the complete
+  euclidean graph, Discrete \& Computational Geometry 7~(1) (1992) 13--28.
+\newblock \href {http://dx.doi.org/10.1007/BF02187821}
+  {\path{doi:10.1007/BF02187821}}.
+
+\bibitem{CLRS}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, C.~Stein, Introduction to
+  Algorithms, 3rd Edition, McGraw-Hill Higher Education, 2009.
+
+\end{thebibliography}
