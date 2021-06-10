@@ -1,0 +1,76 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\usepackage{amssymb,amsmath}
+%\usepackage[margin=2.5cm]{geometry}
+\bibliographystyle{elsarticle-num}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\begin{document}
+\textbf{Editor comment:} \textit{Recall that IPL has no language editing service. So to be accepted, it is of utmost importance that your paper also uses perfect English.} \\
+\textbf{Response:} We revised the paper, and corrected the writing mistakes mentioned by the reviewers.\\
+\\
+\textbf{Reviewer \#2:} \textit{The authors claimed they improved the approximation factor. This claim of course is not correct as there is a (1+eps)-approximation algorithm for the problem. If you just set eps = 1 for example, you will get 2-approx.
+The authors of ref 1 have not planned to find the best constant approximation algorithm. Indeed they just wanted to have a constant approx in order to exploit it for designing (1+eps)-approx.}\\
+\textbf{Response:} Right, there is a $(1+\epsilon)$-approximation algorithm for the problem. But its running time is exponential with respect to $1/\epsilon$, and it seems impractical for a small $\epsilon$. Its running time is $O(2^{O(m^2\log m)}+n\log n)$ \cite[Theorem 27]{Arkin2006}, in which $\dfrac{\sqrt{2}}{m}.F_c$ should not be greater than $\epsilon$. $F_c$ is the approximation factor of the $O(1)-$approximation algorithm. If we set $\epsilon=1$, as it was in your example, $m$ would be greater than $\dfrac{\sqrt{2}\times 57}{\epsilon}\approx 80$, which adds a huge constant (greater than $2^{12000}$) to the running time. \\
+The PTAS algorithm is remarkable. But, we think it would be practical for a wider interval of $\epsilon$, if it exploits an $O(1)-$approximation algorithm with a lower approximation factor. Anyway, the claim on improvement of the approximation factor was omitted from the paper.
+\\
+\textbf{Reviewer \#2:} \textit{It is not clear why you explain the algorithm given in 1. Your algorithm is independent of that algorithm.}\\
+\textbf{Response:} We should explain it, to calculate its approximation factor.
+\\
+\textbf{Reviewer \#2:} \textit{You use d as both Diam(R) and the side of the square. Rename one of them.}\\
+\textbf{Response:} The sides of the rectangle are $a$ and $b$, which are less than or equal to $d=diam(R)$. We have mentioned it in section 3, paragraphs 2 and 3. So, everywhere we used $d$, we meant $diam(R)$.
+\\
+\textbf{Reviewer \#2:} \textit{page 10, line 5: $n >= 4 \rightarrow n> 4$ or in line 8 $n <= 4 \rightarrow n < 4$}\\
+\textbf{Response:} We corrected the latter one to $n\le3$. Thank you.\\
+\\
+\textbf{Reviewer \#3:} \textit{The Arkin et al.'s paper [1] has proposed solutions for general and specific graphs and general geometric spaces. Their solution for geometric spaces is generic and works in any dimension and a PTAS - also working for all dimensions. Moreover, [1] never worried about the numerical value of the approximation factor. The solution proposed in the present text might be extended to higher dimension (though the authors haven't mention this) with the same time complexity, but the approximation factor would be much higher than in [1] for higher dimensional spaces.}\\
+\textbf{Response:} We do not claim our algorithm is more efficient in any dimension. Just in 2-dimensional case, we claim that it has a better approximation factor and time complexity. We have edited the title, the abstract, and the sections of the paper, and explicitly mentioned that it is focused on 2-dimensional case. Also, the claim on improvement of the approximation factor was omitted from the paper.
+\\
+\textbf{Reviewer \#3:} \textit{The paper is very easy to follow. The technical part of the text could have been condensed into 1-2 pages - many simple conclusions are taking too much space. It is written in simple English, though in numerous places (too many to cite) commas are missing.} \\
+\textbf{Response:} The paper has been revised. We tried to have no missing comma in the revised version.
+\\
+\textbf{Reviewer \#3:} \textit{On the other hand, the algorithm is not explicitly written and is only described in informal way.}\\
+\textbf{Response:} We added the pseudocode of the algorithm to the paper [page 10].
+\\
+\textbf{Reviewer \#3:} \textit{The definition of sets R', R" and rectangles A', A" should be done in inductive (or recursive) way: R'1 and R"1 should be constructed from R (or R"0=R by definition), and then R'(i+1) and R"(i+1) should be defined using R'i and R"i.}\\
+\textbf{Response:} The algorithm is a recursive one (as stated in page 7, the last paragraph, and page 8, the last paragraph). It inputs $r$ and $R$, in each call and calculates $R'$ and $R''$ based on its inputs. Therefore, $R'$ and $R''$  are not defined inductively.
+\\
+\textbf{Reviewer \#3:} \textit{There is one fundamental logical mistake related to the items 6 and 8 in the list below. Consider the case where the sets R', R" are of even size and the median point defining A' and A" splits the rectangle into two sub-rectangles so that the smaller size sub-rectangle contains one less point than the larger sub-rectangle. For example, if $|R"|=1$ we may have $|R'|=4$ and $|R|=10$. Then the algorithm of the paper clearly takes more than 3 rounds (i.e. the wake-up tree has depth 5 at least). This situation may arise at any level of the corresponding rectangle subdivision. The awakening process is then more costly and the upper bound on the approximation factor is larger than proven in the paper.}
+\\
+\textbf{Response:} Right. We have smoothly changed the definitions of $R'$ and $R''$ as follows, so that the sizes of them will be ${ |R'|=\lfloor\dfrac{n}{2}\rfloor }$ and ${ |R''|=\big\lfloor\dfrac{\lfloor\frac{n}{2}\rfloor}{2}\big\rfloor}$:
+
+\textbf{$R'$ [Page 8, Paragraph 2]:} "the set of the robots of $R$ that are located in $A'$, including the robot $m$, if $n$ is even and $A'$ is the left sub-rectangle, and excluding $m$ otherwise."
+
+\textbf{$R''$ [Page 8, Paragraph 4]:} "the set of the robots of $R$ that are located in $A''$, including the robot $m'$ if $\lfloor\dfrac{n}{2}\rfloor$ is even and $A''$ is the bottom sub-rectangle, and excluding $m'$ otherwise."\\
+The other parts of the algorithm and its approximation factor, remain unchanged.
+\\
+\textbf{Reviewer \#3:} \textit{1. Page 2, line 17t: leave $\rightarrow$	leaf}\\
+\textbf{Response:} It was meant to be "leaves". Corrected.
+\\
+\textbf{Reviewer \#3:} \textit{2. Page 2, line 22t: makespan of 20 $\rightarrow$ makespan of 18}\\
+\textbf{Response:} Right. Corrected.
+\\
+\textbf{Reviewer \#3:} \textit{3. Page 4, line 3b: … assumed that the robots are located in a plane robots $\rightarrow$ in Arkin's paper are in a d-dimensional space}\\
+\textbf{Response:} Right. Corrected.
+\\
+\textbf{Reviewer \#3:} \textit{4. Page 7, line 2b:	…rectangle which its length… $\rightarrow$ rectangle, whose length}\\
+\textbf{Response:} Right. Corrected.
+\\
+\textbf{Reviewer \#3:} \textit{5. Page 8, line 3t: We finds $\rightarrow$	We find}\\
+\textbf{Response:} Right. Corrected.
+\\
+\textbf{Reviewer \#3:} \textit{6. Page 8, line 12t:	It is obvious that R' has $\lceil n/2 \rceil-1$ points $\rightarrow$ True only for odd n! For even n R' may contain $\lceil n/2 \rceil-1$ or $\lceil n/2 \rceil$ points}\\
+\textbf{Response:} Right. The paragraph has been changed as stated above.
+\\
+\textbf{Reviewer \#3:} \textit{7. Page 8, line 4b: Obviously R'' has $\lceil |R'|/2 \rceil < n/ 4$ points. $\rightarrow$ No relation with the rest of the paper. It is he lower bound on R'' which is important.}\\
+\textbf{Response:} Lower bound on $R''$ is important to perform the step. Upper bound on $R''$ is also important for ensuring that the divide-and-conquer method ends in a suitable time.
+\\
+\textbf{Response:} \textit{8. Page 9, line 2t: Now, the number of asleep robots remaining in R' is less than or equal to the number, which are the members of $R" \cup \{r\}$ $\rightarrow$ NOT TRUE (see error 6)}\\
+\textbf{Response:} Right. Corrected. Thank you.
+
+\section*{References}
+\bibliography{FTPbib}
+
+\end{document}
