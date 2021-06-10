@@ -1,0 +1,10 @@
+
+- The problem of waking up a swarm of asleep robots, starting with only one awake robot, is named the Freeze-Tag Problem (FTP). 
+
+- In the FTP, the objective is to wake up all the robots in the shortest time possible. 
+
+- The FTP is NP-Hard in general; the complexity of the geometric variant in the Euclidean plane is open.
+
+- In the literature, a constant factor approximation algorithm for the geometric FTP is given, which runs in O(n log n) time. 
+
+- In this paper, we propose a simple O(n)-time constant-factor approximation algorithm, for the 2-dimensional geometric FTP.
